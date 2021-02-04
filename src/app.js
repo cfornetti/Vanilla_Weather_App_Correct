@@ -147,10 +147,10 @@ function displayForecast(response){
  
 function search (city){
 let apiKey="d41ef9769dc7a581713400eb6cdff7f1";
-let apiUrl=`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayTemperature);
  
-let apiUrlForecast=`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+let apiUrlForecast=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrlForecast).then(displayForecast);
 }
  
